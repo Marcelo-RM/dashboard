@@ -135,6 +135,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
+  justify-content: space-around;
 }
 
 .mainSlogan {
@@ -339,63 +340,86 @@ body {
 }
 
 .monitoringContainer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .conteudosContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .conteudo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px 0 var(--purple);
-    border-radius: 20px;
-    padding: 20px;
-    min-width: 260px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px 0 var(--purple);
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 260px;
 }
 
 .conteudoTexts {
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
 }
 
 .conteudoTitle {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .conteudoSubTitle {
-    font-size: 14px;
-    opacity: 0.7;
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 .conteudoPercentage {
-    margin: 0px 20px;
-    border: 5px solid var(--gray-dark);
-    text-align: center;
-    vertical-align: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0px 20px;
+  text-align: center;
+  vertical-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #percentageLeft {
-    border-top-color: var(--red);
+  border-top-color: var(--red);
+}
+
+#percentageLeft::before {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  border: 5px solid var(--gray-dark);
+  border-radius: 50%;
+  border-top-color: var(--red);
+  transform: rotate(45deg);
 }
 
 #percentageRight {
-    border-top-color: var(--orange);
-    border-right9-color: var(--orange);
+  border-top-color: var(--orange);
+  border-right-color: var(--orange);
 }
+
+#percentageRight::before {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  border: 5px solid var(--gray-medium);
+  border-radius: 50%;
+  border-top-color: var(--orange);
+  border-right-color: var(--orange);
+  transform: rotate(45deg);
+}
+
 /*  RIGHT INFORMATIONS */
 
 .rightContainer {
