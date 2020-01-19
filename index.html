@@ -24,5 +24,133 @@
             <img src="assets/icons/logout.svg">
         </div>
     </nav>
+
+    <main class="mainContainer">
+        <div class="mainSlogan bg-orange">
+            <span class="sloganTitle fg-white">Olá, Marcelo</span>
+            <span class="sloganSubTitle fg-white">Bem vindo de volta ao 'Dashboard'</span>
+        </div>
+
+        <div class="calendarContainer">
+            <div class="mounthContainer">
+                <div class="mounthWithWeek">
+                    <span>Dezembro 2-8</span>
+                    <div class="arrows bg-red">
+                        <img src="assets/icons/arrow.svg">
+                        <img class="active" src="assets/icons/arrow.svg">
+                    </div>
+                </div>
+                <div class="mounthCalendar bg-gray-light">
+                    <img src="assets/icons/calendar-purple.svg">
+                    <span>Mês</span>
+                </div>
+            </div>
+
+            <div class="weekContainer">
+                <div class="day">
+                    <span class="dayTitle">Seg</span>
+                    <span class="dayNumber">2</span>
+                    <div class="dayDot bg-orange"></div>
+                </div>
+                <div class="day">
+                    <span class="dayTitle">Ter</span>
+                    <span class="dayNumber">3</span>
+                    <div class="dayDot bg-blue"></div>
+                </div>
+                <div class="day">
+                    <span class="dayTitle">Qua</span>
+                    <span class="dayNumber">4</span>
+                    <div class="dayDot bg-red"></div>
+                </div>
+                <div class="day daySelected">
+                    <span class="dayTitle">Qui</span>
+                    <span class="dayNumber">5</span>
+                    <div class="dayDot bg-blue"></div>
+                </div>
+                <div class="day">
+                    <span class="dayTitle">Sex</span>
+                    <span class="dayNumber">6</span>
+                    <div class="dayDot bg-orange"></div>
+                </div>
+                <div class="day">
+                    <span class="dayTitle">Sab</span>
+                    <span class="dayNumber">7</span>
+                    <div class="dayDot bg-red"></div>
+                </div>
+                <div class="day">
+                    <span class="dayTitle">Dom</span>
+                    <span class="dayNumber">8</span>
+                    <div class="dayDot bg-blue"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reportsContainer">
+            <div class="reportHeader">
+                <span class="reportTitle">Relatórios semanais</span>
+                <div class="reportsDays">
+                    <span>Hoje</span>
+                    <span class="selected">Semana</span>
+                    <span>Mês</span>
+                </div>
+            </div>
+
+            <div class="categoriaContainer">
+                <div class="categoria lixo  selected">
+                    <div class="icon">
+                        <img src="assets/icons/switch-orange.svg" alt="">
+                    </div>
+                    <span>Lixo eletrônico</span>
+                    <div class="info">35 Gb</div>
+                </div>
+                <div class="categoria music">
+                    <div class="icon">
+                        <img src="assets/icons/music-red.svg" alt="">
+                    </div>
+                    <span>Músicas</span>
+                    <div class="info">1.25 Gb</div>
+                </div>
+                <div class="categoria lixeira">
+                    <div class="icon">
+                        <img src="assets/icons/trash-blue.svg" alt="">
+                    </div>
+                    <span>Lixeira</span>
+                    <div class="info">16.35 Gb</div>
+                </div>
+                <div class="categoria fotos">
+                    <div class="icon">
+                        <img src="assets/icons/instagram-purple.svg" alt="">
+                    </div>
+                    <span>Fotos</span>
+                    <div class="info">12.10 Gb</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="monitoringContainer">
+            <div class="monitoringTitle">Monitor geral</div>
+
+            <div class="conteudosContainer">
+                <div class="conteudo">
+                    <div class="conteudoTexts">
+                        <span class="conteudoTitle">Arquivos do sistema</span>
+                        <span class="conteudoSubTitle">Dezembro 2019</span>
+                    </div>
+                    <div class="conteudoPercentage" id="percentageLeft">25%</div>
+                </div>
+                <div class="conteudo bg-purple fg-white">
+                    <div class="conteudoTexts">
+                        <span class="conteudoTitle">Aplicações</span>
+                        <span class="conteudoSubTitle">Dezembro 2019</span>
+                    </div>
+                    <div class="conteudoPercentage" id="percentageRight">50%</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="rightContainer">
+
+    </aside>
 </body>
 </html>

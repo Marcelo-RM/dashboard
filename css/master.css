@@ -1,125 +1,405 @@
 :root {
-    --purple: #332a7c;
-    --orange: #ffa000;
-    --red: #ffa000;
-    --blue: #87dff0;
-    --white: #f3f2f7;
-    --gray-light: #f6f6fc;
-    --gray-medium: #e7e7f7;
-    --gray-dark: #bbb9d9;
+  --purple: #332a7c;
+  --orange: #ffa000;
+  --red: #f25767;
+  --blue: #87dff0;
+  --white: #f3f2f7;
+  --gray-light: #f6f6fc;
+  --gray-medium: #e7e7f7;
+  --gray-dark: #bbb9d9;
 }
 
 .bg-purple {
-    background-color: var(--purple);
+  background-color: var(--purple);
 }
 
 .bg-orange {
-    background-color: var(--orange);
+  background-color: var(--orange);
 }
 
 .bg-red {
-    background-color: var(--red);
+  background-color: var(--red);
 }
 
 .bg-blue {
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 .bg-white {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 .bg-gray-light {
-    background-color: var(--gray-light);
+  background-color: var(--gray-light);
 }
 
 .bg-gray-medium {
-    background-color: var(--gray-medium);
+  background-color: var(--gray-medium);
 }
 
 .bg-gray-dark {
-    background-color: var(--gray-dark);
+  background-color: var(--gray-dark);
 }
 
 .fg-purple {
-    color: var(--purple);
+  color: var(--purple);
 }
 
 .fg-orange {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 .fg-red {
-    color: var(--red);
+  color: var(--red);
 }
 
 .fg-blue {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .fg-white {
-    color: var(--white);
+  color: var(--white);
 }
 
 .fg-gray-light {
-    color: var(--gray-light);
+  color: var(--gray-light);
 }
 
 .fg-gray-medium {
-    color: var(--gray-medium);
+  color: var(--gray-medium);
 }
 
 .fg-gray-dark {
-    color: var(--gray-dark);
+  color: var(--gray-dark);
 }
 
 /*  */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  color: var(--purple);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color: var(--white);
 }
 
+/* LEFT NAV BAR */
 .navBar {
-    min-width: 8vw;
-    height: calc(100vh - 16px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
+  font-size: 20px;
+  min-width: 8vw;
+  height: calc(100vh - 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .iconContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .iconContainer img {
-    width: 25px;
-    margin: 0.8rem 0;
-    filter: invert(1);
-    cursor: pointer;
+  width: 25px;
+  margin: 0.8rem 0;
+  filter: invert(1);
+  cursor: pointer;
 }
 
 .logout img {
-    width: 25px;
-    margin: 0.8rem 0;
-    filter: invert(1);
-    cursor: pointer;
+  width: 25px;
+  margin: 0.8rem 0;
+  filter: invert(1);
+  cursor: pointer;
 }
 
 .test {
-    width: 25px;
-    height: 25px;
-    padding: 5px;
-    background-color: red;
-    -webkit-mask: url(../assets/icons/wind.svg) no-repeat center;
-    mask: url(../assets/icons/wind.svg) no-repeat center;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  background-color: red;
+  -webkit-mask: url(../assets/icons/wind.svg) no-repeat center;
+  mask: url(../assets/icons/wind.svg) no-repeat center;
+}
+
+/*  CENTER INFORMATIONS */
+
+.mainContainer {
+  width: 52vw;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.mainSlogan {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  background-image: url(../assets/images/macbook.png);
+  background-position: 35vw;
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+.sloganTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.sloganSubTitle {
+  opacity: 0.8;
+}
+
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.mounthContainer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-dark);
+  padding-bottom: 10px;
+}
+
+.mounthWithWeek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mounthWithWeek span {
+  padding: 10px 0;
+}
+
+.arrows {
+  display: flex;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.arrows img {
+  width: 10px;
+  filter: invert(1);
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.arrows .active {
+  opacity: 1;
+}
+
+.arrows img:nth-child(1) {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+.mounthCalendar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mounthCalendar img {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.mounthCalendar span {
+  padding-top: 3px;
+}
+
+.weekContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gray-dark);
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dayTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dayNumber {
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.dayDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.daySelected {
+  background-color: var(--red);
+  border-radius: 10px;
+  box-shadow: 0 1px 5px 0 var(--red);
+}
+
+.daySelected .dayDot {
+  background-color: var(--white);
+}
+
+.reportsContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reportsDays span {
+  font-size: 16px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.reportsDays .selected {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.categoriaContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.categoria {
+  padding: 10px 20px;
+  border: 1px solid var(--gray-dark);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  box-shadow: 0 2px 5px 0 var(--purple);
+}
+
+.categoria span {
+  font-size: 16px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.categoria .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid gray;
+}
+
+.categoria .icon img {
+  width: 100%;
+}
+
+.lixo .icon {
+  border-color: var(--orange);
+}
+
+.music .icon {
+  border-color: var(--red);
+}
+
+.lixeira .icon {
+  border-color: var(--blue);
+}
+
+.fotos .icon {
+  border-color: var(--purple);
+}
+
+.monitoringContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.conteudosContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 var(--purple);
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 260px;
+}
+
+.conteudoTexts {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.conteudoTitle {
+    font-size: 18px;
+}
+
+.conteudoSubTitle {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.conteudoPercentage {
+    margin: 0px 20px;
+    border: 5px solid var(--gray-dark);
+    text-align: center;
+    vertical-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#percentageLeft {
+    border-top-color: var(--red);
+}
+
+#percentageRight {
+    border-top-color: var(--orange);
+    border-right9-color: var(--orange);
+}
+/*  RIGHT INFORMATIONS */
+
+.rightContainer {
+  border: 1px solid black;
+
+  width: 40vw;
 }
