@@ -3,7 +3,7 @@
   --orange: #ffa000;
   --red: #f25767;
   --blue: #87dff0;
-  --white: #f6f6fc;
+  --white: #fcfcfc;
   --gray-light: #f3f2f7;
   --gray-medium: #e7e7f7;
   --gray-dark: #bbb9d9;
@@ -424,8 +424,10 @@ body {
 
 .rightContainer {
   width: 40vw;
+  height: calc(100vh - 16px);
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .optionsContainer {
@@ -441,7 +443,7 @@ body {
 }
 
 .rightInfo {
-  padding: 40px;
+  padding: 20px 40px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -453,7 +455,7 @@ body {
 }
 
 .functionTitle {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .functionContainer {
@@ -463,9 +465,10 @@ body {
 
 .function {
   margin: 10px;
-  background-color: #fff;
+  background-color: var(--white);
   padding: 5px;
   border-radius: 10px;
+  min-width: 200px;
 }
 
 .functionHeader {
@@ -499,7 +502,7 @@ body {
   display: table-cell;
   position: relative;
   width: 80px;
-    /* height: 140px; */
+  /* height: 140px; */
   box-sizing: border-box;
 }
 
@@ -554,7 +557,7 @@ body {
 }
 
 /* Button 1 */
-#button-1 .knobs:before {
+.button .knobs:before {
   content: "";
   position: absolute;
   /* top: 4px;
@@ -572,18 +575,139 @@ body {
   transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
 
-#button-1 .checkbox:checked + .knobs:before {
+.button .checkbox:checked + .knobs:before {
   content: "";
   left: 20px;
   background-color: var(--gray-dark);
 }
 
-#button-1 .checkbox:checked ~ .layer {
+.button .checkbox:checked ~ .layer {
   background-color: var(--gray-medium);
 }
 
-#button-1 .knobs,
-#button-1 .knobs:before,
-#button-1 .layer {
+.button .knobs,
+.button .knobs:before,
+.button .layer {
   transition: 0.3s ease all;
+}
+
+.statisticContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.statisticTitle {
+  padding: 20px 0;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: var(--white);
+  border-radius: 20px;
+  min-height: 170px;
+  padding-bottom: 10px;
+}
+
+.statisticHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.percentageTitle {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 5px 0;
+}
+
+.percentageTitle span:nth-child(1) {
+  opacity: 0.6;
+}
+
+.statisticButtons {
+  display: flex;
+  padding: 2px;
+  border: 1px solid var(--gray-dark);
+  border-radius: 10px;
+}
+
+.statisticButtons img {
+  width: 100%;
+}
+
+.statisticButton {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.statisticBars {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 2;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  cursor: pointer;
+}
+
+.barSize {
+  flex-grow: 2;
+  min-height: 7em;
+  width: 1em;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--gray-medium);
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.preenchimento {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  background-color: var(--blue);
+  align-self: flex-end;
+}
+
+#seg .preenchimento {
+  height: 65%;
+}
+
+#ter .preenchimento {
+  height: 50%;
+}
+#qua .preenchimento {
+  height: 45%;
+}
+#qui .preenchimento {
+  height: 90%;
+}
+#sex .preenchimento {
+  height: 50%;
+}
+#sab .preenchimento {
+  height: 90%;
+}
+#dom .preenchimento {
+  height: 45%;
+}
+
+.selected .barSize .preenchimento {
+  background-color: var(--orange);
+}
+
+.selected span {
+  color: var(--orange);
 }
