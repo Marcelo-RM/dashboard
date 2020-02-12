@@ -10,8 +10,8 @@ body {
 .navBar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 5px 0;
+  justify-content: space-between;
+  padding: 5px 10px;
   border-radius: 15px;
 }
 
@@ -143,6 +143,7 @@ body {
   align-items: center;
   padding: 10px;
   cursor: pointer;
+  transition-duration: 0.6s;
 }
 
 .dayTitle {
@@ -387,6 +388,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   justify-content: space-between;
+  transition-duration: 0.6s;
 }
 
 .functionHeader img {
@@ -554,6 +556,11 @@ body {
   height: 30px;
   padding: 5px;
   border-radius: 10px;
+  transition-duration: 0.6s;
+}
+
+.sbSelected {
+  background-color: var(--orange);
 }
 
 .statisticBars {
@@ -589,6 +596,7 @@ body {
   position: absolute;
   background-color: var(--blue);
   align-self: flex-end;
+  transition-duration: 0.6s;
 }
 
 #seg .preenchimento {
@@ -616,8 +624,10 @@ body {
 
 .selected .barSize .preenchimento {
   background-color: var(--orange);
+  transition-duration: 0.6s;
 }
 
 .selected span {
   color: var(--orange);
+  transition-duration: 0.6s;
 }
